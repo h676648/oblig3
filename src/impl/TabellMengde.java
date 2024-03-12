@@ -28,7 +28,7 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
     @Override
     public boolean erDelmengdeAv(MengdeADT<T> annenMengde) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < size - 1; i++) {
             if (!annenMengde.inneholder(elements[i])) {
                 return false;
             }
@@ -72,14 +72,10 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
     @Override
     public MengdeADT<T> union(MengdeADT<T> annenMengde) {
-        MengdeADT<T> union = new TabellMengde<>();
-        for (int i = 0; i < size; i++) {
-            union.leggTil(elements[i]);
-        }
-       for (int i = 0; i < size; i++) {
-           annenMengde.leggTil(elements[i]);
-       }
-       return union;
+        TabellMengde<T> union = new TabellMengde<>();
+        union.leggTilAlleFra(this);
+        union.leggTilAlleFra(annenMengde);
+        return union;
     }
 
     @Override
@@ -105,9 +101,9 @@ public class TabellMengde<T> implements MengdeADT<T> {
 
     @Override
     public void leggTilAlleFra(MengdeADT<T> annenMengde) {
-        for (int i = 0; i < size; i++) {
-           leggTil(elements[i]);
-        }
+       for (T element : annenMengde.tilTabell()) {
+           leggTil(element);
+       }
     }
 
     @Override
