@@ -11,7 +11,7 @@ public class LinearNode<T> implements Iterable<T> {
 
     LinearNode<T> head;
 
-    public LinearNode(T data, LinearNode<T> neste) {
+    public LinearNode(T data) {
         this.data = data;
         this.neste = neste;
     }
@@ -82,7 +82,7 @@ public class LinearNode<T> implements Iterable<T> {
             return;
         }
 
-        LinearNode<T> newNode = new LinearNode<>(data, null);
+        LinearNode<T> newNode = new LinearNode<>(data);
 
         if (pos == 0) {
             newNode.setNext(head);
