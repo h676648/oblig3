@@ -2,6 +2,7 @@ package impl;
 
 import adt.MengdeADT;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class JavaSetToMengde<T> implements MengdeADT<T> {
@@ -9,7 +10,7 @@ public class JavaSetToMengde<T> implements MengdeADT<T> {
     private Set<T> set;
 
     public JavaSetToMengde(){
-
+        this.set = new HashSet<>();
     }
 
 
@@ -79,7 +80,7 @@ public class JavaSetToMengde<T> implements MengdeADT<T> {
     public MengdeADT<T> differanse(MengdeADT<T> annenMengde) {
         MengdeADT<T> mengde = new JavaSetToMengde<>();
         for (T element : set) {
-            if (element.equals(annenMengde)) {
+            if (!annenMengde.inneholder(element)) {
                 mengde.leggTil(element);
             }
         }
@@ -109,7 +110,9 @@ public class JavaSetToMengde<T> implements MengdeADT<T> {
 
     @Override
     public T[] tilTabell() {
-        return (T[]) set.toArray();
+        T[] tabell = (T[]) new Object[set.size()];
+
+        return set.toArray(tabell);
     }
 
     @Override

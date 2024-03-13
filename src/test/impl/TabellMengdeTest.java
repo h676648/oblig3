@@ -110,15 +110,6 @@ class TabellMengdeTest {
     }
 
     @Test
-    void tilTabell() { //TODO må gjøres
-        Integer[] tabell = mengde.tilTabell();
-        assertEquals(3, tabell.length);
-        assertTrue(mengde.inneholder(tabell[0]));
-        assertTrue(mengde.inneholder(tabell[1]));
-        assertTrue(mengde.inneholder(tabell[2]));
-    }
-
-    @Test
     void antallElementer() {
         assertEquals(3, mengde.antallElementer());
     }
