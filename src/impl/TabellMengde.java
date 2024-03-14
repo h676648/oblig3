@@ -133,4 +133,6 @@ public class TabellMengde<T> implements MengdeADT<T> {
     private void utvidTabell() { //Utvider tabell
         elements = Arrays.copyOf(elements, size*2);
     }
+
+
 }

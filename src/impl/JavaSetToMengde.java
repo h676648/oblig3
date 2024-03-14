@@ -119,4 +119,6 @@ public class JavaSetToMengde<T> implements MengdeADT<T> {
     public int antallElementer() {
         return set.size();
     }
+
+
 }
