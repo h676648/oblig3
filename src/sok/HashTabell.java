@@ -7,7 +7,7 @@ import java.util.Set;
 
 public class HashTabell<T> implements MengdeADT<T> {
 
-    private Set<T> set;
+    public Set<T> set;
 
     public HashTabell(){
         this.set = new HashSet<>();
@@ -110,7 +110,7 @@ public class HashTabell<T> implements MengdeADT<T> {
 
     @Override
     public T[] tilTabell() {
-        T[] tabell = (T[]) new Object[set.size()];
+        T[] tabell = (T[]) new Integer[set.size()];
 
         return set.toArray(tabell);
     }
