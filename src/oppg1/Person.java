@@ -10,9 +10,6 @@ public class Person {
         this.mengdeHobbyer = mengdeHobbyer();
     }
 
-    public String getNavn() {
-        return navn;
-    }
 
     public String[] getHobbyer() {
         return hobbyer;
@@ -25,13 +22,5 @@ public class Person {
             }
         }
         return y;
-    }
-    public boolean inneholder(String element) {
-        for (int i = 0; i < mengdeHobbyer; i++) {
-            if (hobbyer[i].equals(element)) {
-                return true;
-            }
-        }
-        return false;
     }
 }

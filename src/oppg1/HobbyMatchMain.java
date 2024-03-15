@@ -9,6 +9,7 @@ public class HobbyMatchMain {
     private static double antallFelles;
 
     public static double match(Person a, Person b){
+        antallFelles = 0;
         aHobbyer = a.getHobbyer();
         bHobbyer = b.getHobbyer();
         antallKunHosDenEne = a.mengdeHobbyer();
@@ -22,7 +23,7 @@ public class HobbyMatchMain {
             }
 
         }
-        double match = antallFelles - (antallKunHosDenEne + antallKunHosDenAndre) / antallTotalt;
+        double match = antallFelles / antallTotalt;
         return match;
     }
 
