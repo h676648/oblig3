@@ -1,11 +1,8 @@
-package sok;
+package oppg4;
 
-import impl.JavaSetToMengde;
-import impl.LenketMengde;
+import oppg1.JavaSetToMengde;
+import oppg1.LenketMengde;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
 import java.util.Random;
 
 public class Tid {

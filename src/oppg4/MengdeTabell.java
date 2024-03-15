@@ -1,4 +1,4 @@
-package sok;
+package oppg4;
 
 import adt.MengdeADT;
 

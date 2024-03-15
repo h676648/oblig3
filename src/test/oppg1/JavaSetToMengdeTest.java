@@ -1,15 +1,16 @@
-package impl;
+package oppg1;
+
 import adt.MengdeADT;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
 
-class LenketMengdeTest {
-
-    private LenketMengde<Integer> mengde;
+class JavaSetToMengdeTest {
+    private JavaSetToMengde<Integer> mengde;
     @BeforeEach
     public void setUp() {
-        mengde = new LenketMengde<>();
+        mengde = new JavaSetToMengde<>();
         mengde.leggTil(1);
         mengde.leggTil(2);
         mengde.leggTil(3);
@@ -27,7 +28,7 @@ class LenketMengdeTest {
 
     @Test
     void erDelmengdeAv() {
-        LenketMengde<Integer> annenMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> annenMengde = new JavaSetToMengde<>();
         annenMengde.leggTil(1);
         annenMengde.leggTil(2);
         assertTrue(annenMengde.erDelmengdeAv(mengde));
@@ -35,7 +36,7 @@ class LenketMengdeTest {
 
     @Test
     void erLik() {
-        LenketMengde<Integer> likMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> likMengde = new JavaSetToMengde<>();
         likMengde.leggTil(1);
         likMengde.leggTil(2);
         likMengde.leggTil(3);
@@ -44,14 +45,14 @@ class LenketMengdeTest {
 
     @Test
     void erDisjunkt() {
-        LenketMengde<Integer> annenMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> annenMengde = new JavaSetToMengde<>();
         annenMengde.leggTil(4);
         assertTrue(mengde.erDisjunkt(annenMengde));
     }
 
     @Test
     void snitt() {
-        LenketMengde<Integer> annenMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> annenMengde = new JavaSetToMengde<>();
         annenMengde.leggTil(2);
         annenMengde.leggTil(3);
         MengdeADT<Integer> snitt = mengde.snitt(annenMengde);
@@ -62,7 +63,7 @@ class LenketMengdeTest {
 
     @Test
     void union() {
-        LenketMengde<Integer> annenMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> annenMengde = new JavaSetToMengde<>();
         annenMengde.leggTil(3);
         annenMengde.leggTil(4);
         MengdeADT<Integer> union = mengde.union(annenMengde);
@@ -74,7 +75,7 @@ class LenketMengdeTest {
 
     @Test
     void differanse() {
-        LenketMengde<Integer> annenMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> annenMengde = new JavaSetToMengde<>();
         annenMengde.leggTil(2);
         annenMengde.leggTil(3);
         annenMengde.leggTil(4);
@@ -93,7 +94,7 @@ class LenketMengdeTest {
 
     @Test
     void leggTilAlleFra() {
-        LenketMengde<Integer> annenMengde = new LenketMengde<>();
+        JavaSetToMengde<Integer> annenMengde = new JavaSetToMengde<>();
         annenMengde.leggTil(4);
         annenMengde.leggTil(5);
         mengde.leggTilAlleFra(annenMengde);

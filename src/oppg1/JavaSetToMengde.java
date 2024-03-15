@@ -1,15 +1,15 @@
-package sok;
+package oppg1;
 
 import adt.MengdeADT;
 
 import java.util.HashSet;
 import java.util.Set;
 
-public class HashTabell<T> implements MengdeADT<T> {
+public class JavaSetToMengde<T> implements MengdeADT<T> {
 
-    public Set<T> set;
+    private Set<T> set;
 
-    public HashTabell(){
+    public JavaSetToMengde(){
         this.set = new HashSet<>();
     }
 
@@ -58,7 +58,7 @@ public class HashTabell<T> implements MengdeADT<T> {
 
     @Override
     public MengdeADT<T> snitt(MengdeADT<T> annenMengde) {
-        MengdeADT<T> mengde = new HashTabell<>();
+        MengdeADT<T> mengde = new JavaSetToMengde<>();
         for (T element : set) {
             if (annenMengde.inneholder(element)) {
                 mengde.leggTil(element);
@@ -70,7 +70,7 @@ public class HashTabell<T> implements MengdeADT<T> {
 
     @Override
     public MengdeADT<T> union(MengdeADT<T> annenMengde) {
-        MengdeADT<T> mengde = new HashTabell<>();
+        MengdeADT<T> mengde = new JavaSetToMengde<>();
         mengde.leggTilAlleFra(annenMengde);
         mengde.leggTilAlleFra(this);
         return mengde;
@@ -78,7 +78,7 @@ public class HashTabell<T> implements MengdeADT<T> {
 
     @Override
     public MengdeADT<T> differanse(MengdeADT<T> annenMengde) {
-        MengdeADT<T> mengde = new HashTabell<>();
+        MengdeADT<T> mengde = new JavaSetToMengde<>();
         for (T element : set) {
             if (!annenMengde.inneholder(element)) {
                 mengde.leggTil(element);
@@ -110,7 +110,7 @@ public class HashTabell<T> implements MengdeADT<T> {
 
     @Override
     public T[] tilTabell() {
-        T[] tabell = (T[]) new Integer[set.size()];
+        T[] tabell = (T[]) new Object[set.size()];
 
         return set.toArray(tabell);
     }

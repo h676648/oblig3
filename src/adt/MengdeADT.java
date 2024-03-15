@@ -1,7 +1,5 @@
 package adt;
 
-import impl.TabellMengde;
-
 public interface MengdeADT<T> {
 
     /**

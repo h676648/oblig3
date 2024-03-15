@@ -1,6 +1,6 @@
-package impl;
+package oppg1;
 
-public class KjoreTid {
+public class KjoreTidMain {
     public static void main(String[] args) {
         JavaSetToMengde<Integer> hashSet = new JavaSetToMengde<>();
         TabellMengde<Integer> tabell = new TabellMengde<>();

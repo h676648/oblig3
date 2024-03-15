@@ -1,4 +1,4 @@
-package impl;
+package oppg1;
 
 import adt.MengdeADT;
 import adt.LinearNode;
